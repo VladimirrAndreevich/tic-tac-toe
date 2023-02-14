@@ -23,6 +23,9 @@ window.onload = function () {
           document.getElementById("winner").innerHTML = turn
             ? "The cross"
             : "The zero";
+        } else if (isFullField()) {
+          document.getElementById("victory").style.display = "block";
+          document.getElementById("state").innerHTML = "Draw!";
         }
 
         turn = !turn;
@@ -148,6 +151,16 @@ window.onload = function () {
     }
 
     return false;
+  }
+
+  function isFullField() {
+    for (let index = 0; index < recordGameField.length; index++) {
+      const element = recordGameField[index];
+      if (element === "") {
+        return false;
+      }
+    }
+    return true;
   }
 
   // Reload page by pressing /= try again =/

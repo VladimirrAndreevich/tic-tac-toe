@@ -195,3 +195,22 @@
   color: black;
   background-color: white;
 }
+
+@media (max-width: 600px) {
+  .game {
+    --size: 400px;
+    --gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .game {
+    --size: 300px;
+    --gap: 10px;
+  }
+}
+@media (max-width: 300px) {
+  .game {
+    --size: 250px;
+    --gap: 10px;
+  }
+}
